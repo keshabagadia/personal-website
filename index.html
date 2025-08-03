@@ -1,40 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kesha Bagadia – Game Design Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Kris Charm – Portfolio</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2em; }
-    h1, h2 { color: #333; }
-    a { color: #0066cc; text-decoration: none; }
-    .project { margin-bottom: 2em; }
+    body { font-family: sans-serif; margin: 2em; background: #f4f4f4; color: #333; }
+    h1, h2 { text-align: center; }
+    .filters { text-align: center; margin-bottom: 2em; }
+    .filters button {
+      padding: 0.5em 1em;
+      margin: 0.25em;
+      border: none;
+      background: #ddd;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .filters button.active, .filters button:hover {
+      background: #333;
+      color: white;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1em;
+    }
+    .project {
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .tags { margin-top: 0.5em; font-size: 0.85em; color: #777; }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
-  <h1>Kesha Bagadia</h1>
-  <p>Game Designer – Systems, Narrative, and UX Prototyping</p>
+  <h1>Kris Charm</h1>
+  <h2>Creative Technologist & Game Designer</h2>
 
-  <h2>Portfolio Projects</h2>
-
-  <div class="project">
-    <h3><a href="project1.html">Project 1: Mic Check</a></h3>
-    <p>An AI-powered rap battle game. Built in Unity with ChatGPT integration.
-  <div class="project">
-    <h3><a href="project2.html">Project 2: Torn Apart</a></h3>
-    <p>A 3D packing simulator.</p>
+  <div class="filters">
+    <button class="active" onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('game-design')">Game Design</button>
+    <button onclick="filterProjects('programming')">Programming</button>
+    <button onclick="filterProjects('writing')">Writing</button>
+    <button onclick="filterProjects('film')">Film</button>
+    <button onclick="filterProjects('uiux')">UI/UX</button>
   </div>
 
-  <div class="project">
-    <h3><a href="project3.html">Project 3: Recollection</a></h3>
-    <p>A serious VR narrative experience.</p>
+  <div class="projects">
+    <div class="project game-design programming">
+      <h3>Time Loop Tactics</h3>
+      <p>A turn-based strategy prototype featuring looping enemy behavior.</p>
+      <div class="tags">Tags: Game Design, Programming</div>
+    </div>
+
+    <div class="project game-design writing">
+      <h3>Mythos Planner</h3>
+      <p>A branching narrative planning tool using Twine and spreadsheets.</p>
+      <div class="tags">Tags: Game Design, Writing</div>
+    </div>
+
+    <div class="project game-design uiux">
+      <h3>Puzzle Grove</h3>
+      <p>A level design study focused on puzzle difficulty balancing and UX flows.</p>
+      <div class="tags">Tags: Game Design, UI/UX</div>
+    </div>
+
+    <div class="project film">
+      <h3>Echoes</h3>
+      <p>A short film exploring fragmented memory and nonlinear storytelling.</p>
+      <div class="tags">Tags: Film</div>
+    </div>
+
+    <div class="project uiux programming">
+      <h3>Interface Overload</h3>
+      <p>A layered menu UX concept for fast-paced RTS gameplay.</p>
+      <div class="tags">Tags: UI/UX, Programming</div>
+    </div>
+
+    <div class="project writing">
+      <h3>Critique of Linear Narratives</h3>
+      <p>Essay comparing player-driven storytelling vs. scripted arcs.</p>
+      <div class="tags">Tags: Writing</div>
+    </div>
   </div>
 
-  <div class="project">
-    <h3><a href="project4.html">Project 4: Competing Needs</a></h3>
-    <p>A competitive two-player board game.</p>
-  </div>
+  <script>
+    function filterProjects(tag) {
+      const buttons = document.querySelectorAll('.filters button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
 
-  <hr>
-  <p>Contact: knbagadi@andrew.cmu.edu</p>
+      const projects = document.querySelectorAll('.project');
+      projects.forEach(project => {
+        if (tag === 'all') {
+          project.classList.remove('hidden');
+        } else {
+          project.classList.toggle('hidden', !project.classList.contains(tag));
+        }
+      });
+    }
+  </script>
 </body>
 </html>
-
