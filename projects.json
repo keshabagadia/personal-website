@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Mic Check",
+    "slug": "mic-check",
+    "description": "An AI-rap battle game.",
+    "tags": ["game-design", "writing", "programming"]
+  },
+  {
+    "title": "Recollection",
+    "slug": "recollection",
+    "description": "A serious VR narrative experience exploring memory and identity.",
+    "tags": ["game-design", "writing"]
+  }
+]

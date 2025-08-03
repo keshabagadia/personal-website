@@ -82,7 +82,7 @@
       });
     }
 
-    fetch('projects/projects.json')
+    fetch('projects.json')
       .then(res => res.json())
       .then(data => renderProjectsFromJSON(data));
   </script>
