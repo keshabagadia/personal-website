@@ -3,12 +3,16 @@
     "title": "Mic Check",
     "slug": "mic-check",
     "description": "An AI-rap battle game.",
-    "tags": ["game-design", "writing", "programming"]
+    "tags": ["game-design", "writing", "programming"],
+    "video": "mic-check-thumbnail.mp4",
+    "thumbnailTime": 1.5
   },
   {
     "title": "Recollection",
     "slug": "recollection",
     "description": "A serious VR narrative experience exploring memory and identity.",
-    "tags": ["game-design", "writing"]
+    "tags": ["game-design", "writing"],
+    "video": "recollection-thumbnail.mp4",
+    "thumbnailTime": 1
   }
 ]
