@@ -4,16 +4,43 @@
   <meta charset="UTF-8">
   <title>Kris Charm – Portfolio</title>
   <style>
-    body { font-family: sans-serif; margin: 2em; background: #f4f4f4; color: #333; }
-    h1, h2 { text-align: center; }
-    .filters { text-align: center; margin-bottom: 2em; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9fb;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header h2 {
+      margin: 0.25em 0 0;
+      font-weight: 300;
+      font-size: 1.25em;
+    }
+    .filters {
+      text-align: center;
+      margin: 2em auto;
+      padding: 0 1em;
+      max-width: 800px;
+    }
     .filters button {
-      padding: 0.5em 1em;
-      margin: 0.25em;
+      padding: 0.6em 1.2em;
+      margin: 0.4em;
       border: none;
-      background: #ddd;
+      background: #e0e0e0;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      transition: background 0.2s;
     }
     .filters button.active, .filters button:hover {
       background: #333;
@@ -21,22 +48,47 @@
     }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1em;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      padding: 0 2em 4em;
+      max-width: 1200px;
+      margin: auto;
     }
     .project {
       background: white;
-      padding: 1em;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      padding: 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .tags { margin-top: 0.5em; font-size: 0.85em; color: #777; }
-    .hidden { display: none !important; }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #007acc;
+    }
+    .project a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .tags {
+      margin-top: 1em;
+      font-size: 0.85em;
+      color: #666;
+    }
+    .hidden {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
-  <h1>Kris Charm</h1>
-  <h2>Creative Technologist & Game Designer</h2>
+  <header>
+    <h1>Kris Charm</h1>
+    <h2>Creative Technologist & Game Designer</h2>
+  </header>
 
   <div class="filters">
     <button class="active" onclick="filterProjects('all')">All</button>
