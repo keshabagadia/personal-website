@@ -2,31 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kris Charm – Portfolio</title>
+  <title>Kesha Bagadia – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
   <style>
+    header {
+      background: #222;
+      color: white;
+      padding: 1em 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
+    }
+    header.hidden {
+      transform: translateY(-100%);
+    }
     body {
       font-family: 'Gaegu', cursive;
       margin: 0;
       background: #f9f9fb;
       color: #333;
       text-transform: lowercase;
+      padding-top: 80px; /* Account for fixed header */
     }
-    header {
+    .hero-section {
       background: #222;
       color: white;
-      padding: 2em 1em;
+      padding: 2em 0;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      margin-top: 0;
     }
-    header h1 {
+    .hero-section h1 {
       margin: 0;
       font-size: 2.5em;
     }
-    header h2 {
+    .hero-section h2 {
       margin: 0.25em 0 0;
       font-weight: 300;
       font-size: 1.25em;
+      opacity: 0.9;
+    }
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2em;
+      margin-bottom: 1em;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 15px;
+      transition: background 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .header-content {
+      text-align: center;
+      padding: 0 2em;
+    }
+    .header-content h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .header-content h2 {
+      margin: 0.25em 0 0;
+      font-weight: 300;
+      font-size: 1.25em;
+    }
+    
+    /* Mobile navigation */
+    @media (max-width: 768px) {
+      .header-nav {
+        flex-direction: column;
+        gap: 1em;
+      }
+      .nav-links {
+        gap: 1em;
+      }
+      .nav-links a {
+        padding: 0.4em 0.8em;
+        font-size: 0.9em;
+      }
     }
     .filters {
       text-align: center;
@@ -133,13 +209,88 @@
       color: #999;
       font-size: 0.9em;
     }
+    
+    /* Footer styles */
+    footer {
+      background: #222;
+      color: white;
+      padding: 3em 2em 2em;
+      margin-top: 4em;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-content h3 {
+      margin: 0 0 1em;
+      font-size: 1.8em;
+    }
+    .footer-content p {
+      margin: 0 0 2em;
+      font-size: 1.1em;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+    }
+    .contact-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.8em 1.5em;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .contact-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5em;
+      margin-top: 2em;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-links {
+        gap: 1em;
+      }
+      .contact-links a {
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>kris charm</h1>
-    <h2>creative technologist & game designer</h2>
+    <nav class="header-nav">
+      <div class="logo">kesha bagadia</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">work</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="resume.html">resume</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <section class="hero-section">
+    <h1>creative technologist & game designer</h1>
+    <h2>bringing digital dreams to life</h2>
+  </section>
 
   <div class="filters">
     <button class="active" onclick="filterProjects('all')">all</button>
@@ -153,6 +304,25 @@
   <div class="projects" id="project-container">
     <!-- Projects will be loaded here dynamically -->
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>let's create something amazing together</h3>
+      <p>i'm always excited to collaborate on new projects, discuss creative ideas, or just chat about games, technology, and design.</p>
+      
+      <div class="contact-links">
+        <a href="mailto:hello@krischarm.com">email me</a>
+        <a href="https://twitter.com/krischarm" target="_blank">twitter</a>
+        <a href="https://linkedin.com/in/krischarm" target="_blank">linkedin</a>
+        <a href="https://github.com/krischarm" target="_blank">github</a>
+        <a href="https://instagram.com/krischarm" target="_blank">instagram</a>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 kris charm. made with curiosity and caffeine.</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     function renderProjectsFromJSON(projects) {
@@ -259,6 +429,24 @@
           </div>
         `;
       });
+
+    // Hide/show header on scroll
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling down and past 100px
+        header.classList.add('hidden');
+      } else {
+        // Scrolling up or near top
+        header.classList.remove('hidden');
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile compatibility
+    });
   </script>
 </body>
 </html>
