@@ -11,8 +11,16 @@
     "title": "Recollection",
     "slug": "recollection",
     "description": "A serious VR narrative experience exploring memory and identity.",
-    "tags": ["game-design", "writing"],
+    "tags": ["game-design", "programming"],
     "video": "recollection-thumbnail.mp4",
+    "thumbnailTime": 1
+  },
+  {
+    "title": "Torn Apart",
+    "slug": "torn-apart",
+    "description": "A packing simulation game that reveals the human cost of gentrification.",
+    "tags": ["game-design", "writing"],
+    "video": "torn-apart-thumbnail.mp4",
     "thumbnailTime": 1
   }
 ]
