@@ -15,7 +15,7 @@
       line-height: 1.6;
     }
     
-    /* Header styles (same as main page) */
+    /* Header styles */
     header {
       background: #222;
       color: white;
@@ -66,65 +66,10 @@
       background: rgba(255, 255, 255, 0.1);
     }
     
-    /* Project page specific styles */
-    .project-hero {
-      background: linear-gradient(135deg, #222 0%, #333 100%);
-      color: white;
-      padding: 2.5em 0;
-      text-align: left;
-    }
-    .hero-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 2em;
-    }
-    .project-hero h1 {
-      margin: 0;
-      font-size: 3em;
-      font-weight: bold;
-    }
-    .project-hero .subtitle {
-      margin: 0.5em 0 1em;
-      font-size: 1.3em;
-      opacity: 0.9;
-      font-style: italic;
-    }
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      margin: 1.5em 0;
-      font-size: 1em;
-    }
-    .project-meta span {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 0.4em 0.8em;
-      border-radius: 15px;
-    }
-    .project-links-hero {
-      margin-top: 1.5em;
-    }
-    .project-links-hero a {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.15);
-      color: white;
-      padding: 0.6em 1.2em;
-      margin: 0.3em 0.5em 0.3em 0;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: all 0.3s;
-      font-size: 0.95em;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .project-links-hero a:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-1px);
-    }
-    
     .project-content {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 3em 2em;
+      padding: 2em;
     }
     
     .back-link {
@@ -144,6 +89,7 @@
       text-decoration: underline;
     }
     
+    /* Overview section with video */
     .overview-section {
       background: #fff8f1;
       padding: 0;
@@ -165,8 +111,7 @@
       justify-content: center;
       position: relative;
     }
-    .overview-video iframe,
-    .overview-video video {
+    .overview-video iframe {
       width: 100%;
       height: 100%;
       min-height: 350px;
@@ -214,208 +159,202 @@
       font-size: 0.9em;
       margin-top: 0.1em;
     }
-    .key-contributions {
-      border-top: 1px solid #e0e0e0;
-      padding-top: 1em;
-      margin-top: 1em;
-    }
-    .key-contributions h3 {
-      color: #007acc;
-      font-size: 1em;
-      margin: 0 0 0.8em;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .contributions-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .contributions-list li {
-      font-size: 0.9em;
-      margin: 0.4em 0;
-      padding-left: 1em;
-      position: relative;
-      color: #555;
-    }
-    .contributions-list li:before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: #007acc;
-    }
-    
-    /* Mobile responsive for overview */
-    @media (max-width: 768px) {
-      .overview-grid {
-        grid-template-columns: 1fr;
-      }
-      .overview-video {
-        min-height: 250px;
-      }
-      .overview-video iframe,
-      .overview-video video {
-        min-height: 250px;
-      }
-      .overview-content {
-        padding: 1.5em;
-      }
-      .project-details-grid {
-        grid-template-columns: 1fr;
-        gap: 0.5em;
-      }
-      .carousel-slide {
-        padding: 1.5em;
-      }
-      .carousel-nav {
-        width: 35px;
-        height: 35px;
-        font-size: 1em;
-      }
-      .carousel-nav.prev {
-        left: 0.5em;
-      }
-      .carousel-nav.next {
-        right: 0.5em;
-      }
-    }
-    
-    .case-study {
+
+    /* Role filter buttons */
+    .role-filters {
+      text-align: center;
+      margin: 3em 0 2em;
+      padding: 2em;
       background: white;
-      padding: 2.5em;
       border-radius: 20px;
-      margin: 3em 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .role-filters h3 {
+      color: #007acc;
+      font-size: 1.6em;
+      margin: 0 0 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .role-filters p {
+      color: #666;
+      margin-bottom: 1.5em;
+      font-size: 1.1em;
+    }
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: #f0f8ff;
+      color: #007acc;
+      border: 2px solid #007acc;
+      padding: 0.8em 1.5em;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      font-size: 1em;
+      text-transform: lowercase;
+    }
+    .filter-btn:hover {
+      background: #007acc;
+      color: white;
+      transform: translateY(-2px);
+    }
+    .filter-btn.active {
+      background: #007acc;
+      color: white;
+    }
+
+    /* System cards grid */
+    .systems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2em;
+      margin: 2em 0;
+    }
+
+    .system-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2em;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
       border-left: 4px solid #007acc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 1;
+      transform: scale(1);
     }
-    .case-study h2 {
+    .system-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .system-card.hidden {
+      opacity: 0.3;
+      transform: scale(0.95);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin-bottom: 1em;
+    }
+    .card-icon {
+      font-size: 2em;
+    }
+    .card-title {
       color: #007acc;
-      font-size: 1.8em;
-      margin-top: 0;
-      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      margin: 0;
+      font-weight: bold;
     }
-    .case-study .subtitle {
-      font-style: italic;
+    .card-subtitle {
       color: #666;
+      font-style: italic;
+      margin: 0.5em 0 1em;
       font-size: 1.1em;
-      margin-bottom: 1.5em;
     }
-    .case-study h3 {
+
+    .role-tags {
+      display: flex;
+      gap: 0.5em;
+      margin: 1em 0;
+      flex-wrap: wrap;
+    }
+    .role-tag {
+      background: #f0f8ff;
+      color: #007acc;
+      padding: 0.3em 0.8em;
+      border-radius: 15px;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: bold;
+    }
+    .role-tag.narrative { background: #fff0f5; color: #d63384; }
+    .role-tag.programming { background: #f0fff0; color: #198754; }
+    .role-tag.design { background: #fff8dc; color: #fd7e14; }
+    .role-tag.research { background: #f5f0ff; color: #6f42c1; }
+
+    .card-content h4 {
       color: #333;
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin: 1.5em 0 0.8em;
     }
-    .case-study ul {
-      font-size: 1.05em;
+    .card-content ul {
       padding-left: 1.5em;
+      margin: 0.5em 0;
     }
-    .case-study li {
-      margin: 0.8em 0;
+    .card-content li {
+      margin: 0.5em 0;
+      font-size: 1em;
     }
-    .case-study-links {
+
+    .card-links {
       margin-top: 1.5em;
       padding-top: 1.5em;
       border-top: 1px solid #eee;
     }
-    .case-study-links a {
+    .card-links a {
       display: inline-block;
       color: #007acc;
       text-decoration: none;
       padding: 0.4em 0.8em;
-      margin: 0.2em 0.5em 0.2em 0;
+      margin: 0.2em 0.3em 0.2em 0;
       background: #f0f8ff;
       border-radius: 15px;
-      font-size: 0.95em;
+      font-size: 0.9em;
       transition: all 0.2s;
     }
-    .case-study-links a:hover {
+    .card-links a:hover {
       background: #e0f0ff;
       transform: translateY(-1px);
     }
-    
-    .project-media {
-      margin: 2em 0;
-      text-align: center;
-    }
-    .project-media img, .project-media video {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    .project-media video {
-      max-height: 500px;
-    }
-    .media-caption {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 0.5em;
-      font-style: italic;
-    }
-    .media-placeholder {
-      background: #f0f0f0;
-      border: 2px dashed #ccc;
-      border-radius: 15px;
-      padding: 3em 2em;
-      color: #999;
-      font-style: italic;
-      text-align: center;
-    }
-    
-    .reflection-section {
+
+    /* Impact metrics */
+    .impact-section {
       background: linear-gradient(135deg, #ffefdf, #fff8f1);
       padding: 2.5em;
       border-radius: 20px;
       margin: 3em 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    .reflection-section h2 {
+    .impact-section h2 {
       color: #007acc;
       font-size: 1.8em;
       margin-top: 0;
       margin-bottom: 1em;
+      text-align: center;
     }
-    .reflection-section p {
-      font-size: 1.1em;
-      margin: 1em 0;
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
     }
-    
-    .bonus-materials {
-      background: #f8f8fa;
-      padding: 2em;
-      border-radius: 20px;
-      margin: 3em 0;
-      border: 1px solid #e0e0e0;
-    }
-    .bonus-materials h2 {
-      color: #007acc;
-      font-size: 1.6em;
-      margin-top: 0;
-      margin-bottom: 1em;
-    }
-    .bonus-materials ul {
-      list-style: none;
-      padding: 0;
-    }
-    .bonus-materials li {
-      margin: 0.8em 0;
-    }
-    .bonus-materials a {
-      color: #007acc;
-      text-decoration: none;
-      padding: 0.4em 0.8em;
+    .metric-card {
+      text-align: center;
       background: white;
-      border-radius: 10px;
-      display: inline-block;
-      transition: all 0.2s;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1.5em;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .bonus-materials a:hover {
-      background: #f0f8ff;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .metric-number {
+      font-size: 2.5em;
+      color: #007acc;
+      font-weight: bold;
+      margin: 0;
     }
-    
-    /* Footer styles (same as main page) */
+    .metric-label {
+      color: #666;
+      font-size: 1.1em;
+      margin: 0.5em 0 0;
+    }
+
+    /* Footer */
     footer {
       background: #222;
       color: white;
@@ -477,32 +416,40 @@
       .nav-links {
         gap: 1em;
       }
-      .nav-links a {
-        padding: 0.4em 0.8em;
-        font-size: 0.9em;
+      .overview-grid {
+        grid-template-columns: 1fr;
       }
-      .project-hero h1 {
-        font-size: 2.2em;
+      .overview-video {
+        min-height: 250px;
       }
-      .project-content, .hero-content {
-        padding: 2em 1em;
+      .overview-video iframe {
+        min-height: 250px;
       }
-      .case-study, .overview-section, .reflection-section {
+      .overview-content {
         padding: 1.5em;
+      }
+      .project-details-grid {
+        grid-template-columns: 1fr;
+      }
+      .systems-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+      }
+      .system-card {
+        padding: 1.5em;
+      }
+      .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .filter-btn {
+        width: 200px;
       }
       body {
         padding-top: 120px;
       }
-      .project-meta {
-        flex-direction: column;
-        gap: 0.5em;
-      }
-      .contact-links {
-        gap: 1em;
-      }
-      .contact-links a {
-        padding: 0.6em 1.2em;
-        font-size: 0.9em;
+      .project-content {
+        padding: 1em;
       }
     }
   </style>
@@ -519,26 +466,8 @@
       </ul>
     </nav>
   </header>
-<!-- 
-  <section class="project-hero">
-    <div class="hero-content">
-      <h1>🎤 mic check</h1>
-      <div class="subtitle">writing game · pc · jan 2025 – present · team of 6</div>
-      <div class="project-meta">
-        <span><strong>role:</strong> technical narrative designer</span>
-      </div>
-      <div class="project-links-hero">
-        <a href="#" target="_blank">📁 project page</a>
-        <a href="#" target="_blank">🎮 play</a>
-        <a href="#" target="_blank">🎥 trailer</a>
-      </div>
-    </div>
-  </section> -->
 
-  <!-- <main class="project-content">
-    <div class="back-link">
-      <a href="../index.html">← back to work</a>
-    </div> -->
+  <main class="project-content">
 
     <section class="overview-section">
       <div class="overview-grid">
@@ -554,7 +483,7 @@
         </div>
         <div class="overview-content">
           <h2>mic check</h2>
-          <p class="description">a writing-based investigation game where players win rap battles by uncovering their opponent's weaknesses—through strategic conversations with ai-powered audience members.</p>
+          <p class="description">a rap battle game where you test your penmanship against AI opponents.</p>
           
           <div class="project-details-grid">
             <div class="detail-row">
@@ -585,105 +514,125 @@
           <div class="key-contributions">
             <h3>key contributions</h3>
             <ul class="contributions-list">
-              <li>designed five emotionally intelligent AI NPCs, each with custom chat-reveal mechanics</li>
-              <li>led the creation of the scoring system and co-designed levels to support dynamic pacing and player progression</li>
-              <li>built UI, camera, animation, and game state systems, ensuring seamless interaction and visual flow</li>
-              <li>ran iterative playtests, using feedback to refine features and boost player engagement by 84%</li>
+              <li>Created 4 emotionally intelligent AI characters through custom behavior logic and prompt systems that maintained distinct personalities across dynamic player interactions</li>
+              <li>Delivered fluid gameplay experience by building core systems like UI, player and camera navigation, animation pipelines and state management that support the player journey</li>
+              <li>Led G-funk level design through cross-disciplinary collaboration, ensuring audiovisual design worked in harmony with game and narrative design</li>
+              <li>Mastered freestyle rap fundamentals to write authentic character flow and capture competitive battle dynamics in scoring metrics</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section class="case-studies-intro">
-      <p>as technical narrative designer, i worked across narrative systems, gameplay programming, and world design. this page features three case studies exploring my key contributions:</p>
-      <ul>
-        <li>🧠 guiding genai character behavior through structured docs</li>
-        <li>🎙️ designing rap content that feels authentic</li>
-        <li>🛠️ implementing the gameplay flow and system glue</li>
-      </ul>
-    </section>
+    <div class="systems-grid">
+      <div class="system-card" data-roles="narrative programming">
+        <div class="card-header">
+          <span class="card-icon">🧠</span>
+          <h3 class="card-title">ai character behavior system</h3>
+        </div>
+        <p class="card-subtitle">designing emotionally intelligent npcs that reveal information strategically</p>
+        
+        <!-- <div class="role-tags">
+          <span class="role-tag narrative">narrative</span>
+          <span class="role-tag programming">api integration</span>
+        </div> -->
 
-    <div class="carousel-container">
-      <div class="carousel-header">
-        <button class="carousel-nav prev" onclick="prevSlide()">‹</button>
-        <h2>design challenges</h2>
-        <button class="carousel-nav next" onclick="nextSlide()">›</button>
-      </div>
-      <div class="carousel-wrapper">
-        <div class="carousel-track" id="carousel-track">
-          <div class="carousel-slide">
-            <h3>🧠 guiding ai characters with behavior docs</h3>
-            <div class="subtitle">how do you get generative ai to act like a game character—not a chatbot?</div>
-            
-            <h4>🧩 highlights:</h4>
-            <ul>
-              <li>designed staged gating: characters reveal info only when players earn it</li>
-              <li>wrote tone rules, emotional triggers, and guardrails into response logic</li>
-              <li>used short, isolated lines to reduce linking and hallucination</li>
-              <li>ended docs with a behavioral summary to reinforce key logic</li>
-            </ul>
-            
-            <div class="case-study-links">
-              <a href="#" target="_blank">📎 fly gull hater doc pdf</a>
-              <a href="#" target="_blank">🎥 gameplay clip</a>
-            </div>
-          </div>
-          
-          <div class="carousel-slide">
-            <h3>🎙️ designing for authenticity in a rap game</h3>
-            <div class="subtitle">how do you avoid writing parody and actually engage with rap culture?</div>
-            
-            <h4>🧩 highlights:</h4>
-            <ul>
-              <li>took a freestyle rap class to understand rhythm and flow construction</li>
-              <li>attended a live rap battle to study structure, pacing, and audience reaction</li>
-              <li>built world details based on g-funk and battle rap aesthetics</li>
-              <li>iterated on scoring system to reward clever disses over shallow ones</li>
-            </ul>
-            
-            <div class="case-study-links">
-              <a href="#" target="_blank">📎 scoring system doc</a>
-            </div>
-          </div>
-          
-          <div class="carousel-slide">
-            <h3>🛠️ gameplay scripting & system work</h3>
-            <div class="subtitle">what actually made it all playable?</div>
-            
-            <h4>🧩 highlights:</h4>
-            <ul>
-              <li>implemented level structure, player navigation, and camera system (cinemachine)</li>
-              <li>built out interaction logic, dialogue ui, and state progression</li>
-              <li>integrated assets and handled early animation system using alembic workflow</li>
-              <li>simulated a subway train level environment</li>
-            </ul>
-          </div>
+        <div class="card-content">
+
+          <ul>
+            <li>structured behavior docs to optimize AI readability and comprehension</li>
+            <li>complex and individualistic behavior system for each NPC</li>
+            <li>tone rules and emotional triggers built into response system</li>
+            <li>guardrails to prevent hallucination and maintain character consistency</li>
+          </ul>
+        </div>
+
+        <div class="card-links">
+          <a href="#" target="_blank">📎 character behavior doc</a>
+          <a href="#" target="_blank">🎥 npc interaction demo</a>
         </div>
       </div>
-      <div class="carousel-indicators">
-        <div class="carousel-dot active" onclick="goToSlide(0)"></div>
-        <div class="carousel-dot" onclick="goToSlide(1)"></div>
-        <div class="carousel-dot" onclick="goToSlide(2)"></div>
+
+      <div class="system-card" data-roles="design research">
+        <div class="card-header">
+          <span class="card-icon">🎯</span>
+          <h3 class="card-title">dynamic scoring system</h3>
+        </div>
+        <p class="card-subtitle">research-driven metrics that reward clever strategy over shallow insults</p>
+        
+        <!-- <div class="role-tags">
+          <span class="role-tag design">game design</span>
+          <span class="role-tag research">cultural research</span>
+        </div> -->
+
+        <div class="card-content">
+          <!-- <h4>research foundation:</h4> -->
+          <ul>
+            <li>attended live rap battles to analyze performance structure and audience reactions</li>
+            <li>took freestyle rap course and interviewed hip-hop artists about their creative processes to inform AI prompting</li>
+            <li>weighted scoring that prioritizes clever wordplay and personal knowledge</li>
+            <li>narrative penalty system for generic or offensive content</li>
+          </ul>
+        </div>
+
+        <div class="card-links">
+          <a href="#" target="_blank">📊 scoring system documentation</a>
+          <a href="#" target="_blank">📝 research notes</a>
+        </div>
       </div>
-    </div> -->
 
-    <!-- <section class="reflection-section">
-      <h2>🧠 reflection</h2>
-      <p>this project sat at the intersection of narrative, ai, and systems design. my work focused on building consistent, expressive interactions while making sure the game actually ran. from docs to code, it was all about structure.</p>
-    </section>
+      <div class="system-card" data-roles="programming design">
+        <div class="card-header">
+          <span class="card-icon">⚙️</span>
+          <h3 class="card-title">gameplay flow architecture</h3>
+        </div>
+        <p class="card-subtitle">unity systems that bring narrative and mechanics together seamlessly</p>
+        
+        <!-- <div class="role-tags">
+          <span class="role-tag programming">unity development</span>
+          <span class="role-tag design">ux design</span>
+        </div> -->
 
-    <section class="bonus-materials">
-      <h2>🗂 bonus materials</h2>
-      <ul>
-        <li><a href="#" target="_blank">✏️ <strong>full ai doc:</strong> fly gull hater pdf</a></li>
-        <li><a href="#" target="_blank">🎥 <strong>character dialogue clip:</strong> youtube</a></li>
-        <li><a href="#" target="_blank">📝 <strong>scoring system snapshot:</strong> notion or google doc</a></li>
-      </ul>
+        <div class="card-content">
+          <h4>core systems:</h4>
+          <ul>
+            <li>state management for conversation → investigation → battle flow</li>
+            <li>cinemachine camera system with dynamic framing</li>
+            <li>ui framework for dialogue, inventory, and battle interfaces</li>
+            <li>animation pipeline using alembic workflow</li>
+          </ul>
+        </div>
+
+        <div class="card-links">
+          <a href="#" target="_blank">💻 code samples</a>
+          <a href="#" target="_blank">🎮 gameplay flow demo</a>
+        </div>
+      </div>
+<!-- 
+    <section class="impact-section">
+      <h2>project impact & metrics</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-number">84%</div>
+          <div class="metric-label">increase in player engagement</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">5</div>
+          <div class="metric-label">unique ai characters designed</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">20+</div>
+          <div class="metric-label">playtesting participants</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">6</div>
+          <div class="metric-label">major system integrations</div>
+        </div>
+      </div>
     </section> -->
 
     <div class="back-link">
-      <a href="../index.html">← back to work</a>
+      <a href="../index.html">← back to other projects</a>
     </div>
   </main>
 
@@ -707,7 +656,7 @@
   </footer>
 
   <script>
-    // Hide/show header on scroll (same as main page)
+    // Hide/show header on scroll
     let lastScrollTop = 0;
     const header = document.querySelector('header');
     
@@ -723,38 +672,69 @@
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
-    // Carousel functionality
-    let currentSlide = 0;
-    const totalSlides = 3;
-    
-    function updateCarousel() {
-      const track = document.getElementById('carousel-track');
-      const dots = document.querySelectorAll('.carousel-dot');
-      
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const systemCards = document.querySelectorAll('.system-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        // Filter cards
+        systemCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.classList.remove('hidden');
+          } else {
+            const cardRoles = card.getAttribute('data-roles').split(' ');
+            if (cardRoles.includes(filterValue)) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          }
+        });
       });
-    }
-    
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateCarousel();
-    }
-    
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
-    
-    function goToSlide(index) {
-      currentSlide = index;
-      updateCarousel();
-    }
-    
-    // Auto-advance carousel every 10 seconds
-    setInterval(nextSlide, 10000);
+    });
+
+    // Add smooth scroll behavior for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add intersection observer for card animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.opacity = '1';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all system cards for animation
+    systemCards.forEach(card => {
+      card.style.transform = 'translateY(20px)';
+      card.style.opacity = '0.8';
+      card.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+      cardObserver.observe(card);
+    });
   </script>
 </body>
 </html>
