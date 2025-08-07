@@ -58,6 +58,17 @@ body {
 .logo {
   font-size: 1.5em;
   font-weight: bold;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.logo:visited {
+  color: inherit !important;
+}
+
+.logo:hover {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 .nav-links {
