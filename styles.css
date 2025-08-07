@@ -23,14 +23,6 @@ body {
   color: #333;
   text-transform: lowercase;
   padding-top: 80px; /* Account for fixed header */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Main content area should grow to push footer down */
-.main-content {
-  flex: 1;
 }
 
 .hero-section {
@@ -66,13 +58,6 @@ body {
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: inherit;
-  text-decoration: none;
-}
-
-.logo:hover {
-  color: inherit;
-  text-decoration: none;
 }
 
 .nav-links {
@@ -156,7 +141,7 @@ body {
   gap: 2em;
   padding: 0 2em 4em;
   max-width: 1200px;
-  margin: 2em auto 0;
+  margin: auto;
 }
 
 .project {
@@ -185,7 +170,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .project-video {
@@ -199,11 +184,28 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.project:hover .project-image {
+/* Image hover effects */
+.image-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 122, 204, 0.1);
   opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project:hover .project-image {
+  transform: scale(1.05);
 }
 
 .project:hover .project-video {
+  opacity: 1;
+}
+
+.project:hover .image-hover-overlay {
   opacity: 1;
 }
 

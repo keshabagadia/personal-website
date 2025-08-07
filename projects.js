@@ -21,7 +21,10 @@ function renderProjectsFromJSON(projects) {
           <source src="assets/videos/${project.video}" type="video/mp4">
         </video>`;
       } else if (project.image) {
+        // For image-only projects, add hover effect
         mediaHTML += `<img src="assets/images/${project.image}" alt="${project.title}" class="project-image" loading="lazy">`;
+        // Optional: Add a subtle hover overlay for image projects
+        mediaHTML += `<div class="image-hover-overlay"></div>`;
       }
       
       mediaHTML += `</div>`;

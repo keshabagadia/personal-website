@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Competing Needs – Kesha Bagadia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../project-styles.css">
+
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main class="project-content">
+    <section class="overview-section">
+      <div class="overview-grid">
+        <div class="overview-video">
+          <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+              <!-- Placeholder slide - replace with your actual images -->
+              <div class="carousel-slide">
+                <div class="carousel-placeholder">
+                  <div>
+                    <h3>Competing Needs</h3>
+                    <p>Add your game images here!</p>
+                    <p style="font-size: 14px; margin-top: 20px;">
+                      Replace the image sources in the JavaScript below with your actual game photos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Navigation arrows -->
+            <button class="carousel-nav carousel-prev" id="prevBtn">‹</button>
+            <button class="carousel-nav carousel-next" id="nextBtn">›</button>
+            
+            <!-- Dot indicators -->
+            <div class="carousel-indicators" id="indicators"></div>
+          </div>
+        </div>
+        <div class="overview-content">
+          <h2>your game title</h2>
+          <p class="description">A two-player competitive game about balancing physical and creative needs for a person's day.</p>
+          
+          <div class="project-details-grid">
+            <div class="detail-row">
+              <strong>role:</strong>
+              <span>game designer</span>
+            </div>
+            <div class="detail-row">
+              <strong>players:</strong>
+              <span>2</span>
+            </div>
+            <div class="detail-row">
+              <strong>duration:</strong>
+              <span>30-60 minutes</span>
+            </div>
+            <div class="detail-row">
+              <strong>age range:</strong>
+              <span>12+</span>
+            </div>
+            <div class="detail-row">
+              <strong>complexity:</strong>
+              <span>medium</span>
+            </div>
+            <div class="detail-row">
+              <strong>status:</strong>
+              <span>polished prototype</span>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="../assets/competing-needs/rulebook.pdf" class="project-link" target="_blank">rulebook</a>
+            <a href="https://drive.google.com/drive/folders/1sia-h2uXxpFWRqitQeXoMk52qUvhYPf0?usp=drive_link" class="project-link" target="_blank">print & play</a>
+            <a href="../assets/competing-needs/design-process.pdf" class="project-link" target="_blank">learn more</a>
+          </div>
+          
+          <div class="key-contributions">
+            <h3>design highlights</h3>
+            <ul class="contributions-list">
+              <li>Created innovative calendar-based board design that leverages players' familiarity with daily scheduling for intuitive gameplay flow</li>
+              <li>Developed competing internal voices mechanic using Self-Determination Theory, transforming abstract psychological needs into concrete player roles</li>
+              <li>Evolved through three major iterations from collaborative to competitive design, demonstrating focused scope refinement and rapid prototyping skills</li>
+              <li>Balanced mathematical framework ensuring strategic depth while maintaining accessibility for first-time players</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-link">
+      <a href="../index.html">← back to work</a>
+    </div>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../common.js"></script>
+  <script src="../carousel.js"></script>
+  <script>
+    // Initialize carousel and load images from directory
+    document.addEventListener('DOMContentLoaded', async () => {
+      const carousel = new ImageCarousel();
+      await carousel.loadImagesFromDirectory('../assets/competing-needs/overview-carousel/');
+    });
+  </script>
+</body>
+</html>
