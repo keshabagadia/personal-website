@@ -22,13 +22,6 @@
     "tags": ["game-design", "writing"],
     "video": "torn-apart-thumbnail.mp4",
     "thumbnailTime": 3
-  },
-  {
-    "title": "Competing Needs",
-    "slug": "competing-needs",
-    "description": "A two-player competitive game about balancing physical and creative needs for a person's day.",
-    "tags": ["game-design"],
-    "image": "competing-needs-thumbnail.png"
   }
 
 ]
