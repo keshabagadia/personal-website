@@ -1,9 +1,24 @@
 /* Project page specific styles */
 
 /* Project page specific body adjustments */
+html {
+  height: 100%;
+  height: 100vh;
+  height: -webkit-fill-available; /* For mobile Safari */
+}
+
 body {
+  font-family: 'Gaegu', cursive;
+  margin: 0;
+  background: #f9f9fb;
+  color: #333;
+  text-transform: lowercase;
   padding-top: 80px;
-  line-height: 1.6;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* For mobile Safari */
 }
 
 /* Project hero section */
@@ -491,6 +506,21 @@ body {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  html {
+    height: -webkit-fill-available;
+  }
+  
+  body {
+    padding-top: 120px;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  
+  .project-content {
+    flex: 1; /* Add this to make content expand */
+    padding: 2em 1em;
+  }
+  
   .project-hero h1 {
     font-size: 2.2em;
   }
@@ -501,10 +531,6 @@ body {
   
   .case-study, .overview-section, .reflection-section {
     padding: 1.5em;
-  }
-  
-  body {
-    padding-top: 120px;
   }
   
   .project-meta {
