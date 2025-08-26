@@ -37,7 +37,7 @@ function renderProjectsFromJSON(projects) {
       <div class="project-content">
         <h3><a href="projects/${project.slug}.html">${project.title}</a></h3>
         <p>${project.description}</p>
-        <div class="tags">tags: ${project.tags.map(tag => tag.replace('-', ' ')).join(', ')}</div>
+        <!--<div class="tags">tags: ${project.tags.map(tag => tag.replace('-', ' ')).join(', ')}</div>-->
       </div>
     `;
     
