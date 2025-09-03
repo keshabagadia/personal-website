@@ -89,7 +89,7 @@ function filterProjects(tag, evt) {
 }
 // Path to projects.json. Update this path if your deployment structure changes.
 // Expected location: relative to the HTML file loading this script.
-const PROJECTS_JSON_PATH = "../data/projects.json";
+const PROJECTS_JSON_PATH = "data/projects.json";
 
 // Load projects from projects.json
 document.addEventListener('DOMContentLoaded', function() {
