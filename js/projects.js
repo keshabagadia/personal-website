@@ -37,13 +37,15 @@ function renderProjectsFromJSON(projects) {
       mediaHTML = `<div class="project-media no-media">no preview available</div>`;
     }
     
-    // Fix project link path - should be relative to current page location
     const projectLink = `./projects/${project.slug ? encodeURIComponent(project.slug) : ''}.html`;
+    console.log(`Generated link for ${project.title}: ${projectLink}`);
+    console.log(`Current page URL: ${window.location.href}`);
+    console.log(`Full resolved URL would be: ${new URL(projectLink, window.location.href).href}`);
     
     div.innerHTML = `
       ${mediaHTML}
       <div class="project-content">
-        <h3><a href="${projectLink}">${project.title ? project.title.replace(/</g, "&lt;").replace(/>/g, "&gt;") : 'Untitled'}</a></h3>
+        <h3><a href="${projectLink}" onclick="console.log('Clicked link:', this.href); return true;">${project.title ? project.title.replace(/</g, "&lt;").replace(/>/g, "&gt;") : 'Untitled'}</a></h3>
         <p>${project.description ? project.description.replace(/</g, "&lt;").replace(/>/g, "&gt;") : ''}</p>
         <!--<div class="tags">tags: ${Array.isArray(project.tags) ? project.tags.map(tag => tag.replace('-', ' ')).join(', ') : ''}</div>-->
       </div>
