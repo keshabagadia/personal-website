@@ -10,7 +10,7 @@ function renderPrototypes(jsonPath, containerSelector, collectionName) {
         card.className = 'prototype-card';
         card.innerHTML = `
           <div class="card-front">
-            <img src="../${proto.thumbnail}" alt="${proto.title}" class="prototype-thumb">
+            <img src="../assets/${proto.thumbnail}" alt="${proto.title}" class="prototype-thumb">
             <h3>${proto.title}</h3>
             <p class="prototype-brief">${proto.brief}</p>
             <div class="prototype-tech">

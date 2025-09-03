@@ -29,5 +29,13 @@
     "description": "A two-player competitive game about balancing physical and creative needs for a person's day.",
     "tags": ["game"],
     "image": "competing-needs-thumbnail.png"
+  },
+  {
+    "title": "phonics prototypes",
+    "slug": "phonics-prototypes",
+    "description": "rapid prototyping exploration of phonics learning mechanics through iterative design and user research",
+    "video": "phonics-prototypes-thumbnail.mp4",
+    "tags": ["prototype", "research"],
+    "thumbnailTime": 1
   }
 ]

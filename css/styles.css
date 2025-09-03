@@ -175,6 +175,8 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
   position: relative;
+  max-width: 600px;      /* Limit card width */
+  width: 100%;           /* Responsive */
 }
 
 .project:hover {

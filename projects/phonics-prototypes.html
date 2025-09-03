@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🗣️phonics prototypes – Kesha Bagadia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/project-styles.css">
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main class="project-content">
+    <!-- <section class="overview-section">
+      <div class="overview-grid">
+        <div class="overview-video">
+          <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides"></div>
+            <button class="carousel-nav carousel-prev" id="prevBtn">‹</button>
+            <button class="carousel-nav carousel-next" id="nextBtn">›</button>
+            <div class="carousel-indicators" id="indicators"></div>
+          </div>
+        </div>
+        <div class="overview-content">
+          <h2>phonics prototypes</h2>
+          <p class="description">rapid prototyping exploration of phonics learning mechanics for middle schoolers through iterative design and user research. designed and developed 5 unique educational game prototypes testing different approaches to phonemic awareness.</p>
+          
+          <div class="project-details-grid">
+            <div class="detail-row"><strong>role:</strong><span>technical game designer</span></div>
+            <div class="detail-row"><strong>team:</strong><span>4 members</span></div>
+            <div class="detail-row"><strong>duration:</strong><span>may 2024 – aug 2024</span></div>
+            <div class="detail-row"><strong>platform:</strong><span>pc, web, board games</span></div>
+            <div class="detail-row"><strong>tools:</strong><span>Unity, C#, Python, CMU pronunciation library</span></div>
+            <div class="detail-row"><strong>institution:</strong><span>center for transformational play, cmu</span></div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://miro.com/app/board/uXjVNdKLic0=/" class="project-link" target="_blank">research board</a>
+          </div>
+          
+          <div class="key-contributions">
+            <h3>key contributions</h3>
+            <ul class="contributions-list">
+              <li>designed and developed 5+ educational game prototypes testing different phonics learning mechanics</li>
+              <li>established EOTA methodology (experience, observations, theory, advice) for structured user feedback</li>
+              <li>conducted weekly user research sessions with target demographic to validate design decisions</li>
+              <li>built modular systems in unity and web technologies for rapid iteration cycles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="prototype-showcase">
+      <h2>prototype showcase</h2>
+      <p class="subtitle">each prototype explored different learning mechanics and interaction patterns</p>
+      <div class="prototype-showcase-list"></div>
+    </section>
+    
+    <section class="reflection-section">
+      <h2>impact and learnings</h2>
+      <p>this research project validated my ability to rapidly prototype and iterate educational game concepts while maintaining rigorous user research standards. the EOTA methodology proved valuable for structured feedback collection, and the diversity of prototypes demonstrated adaptability across different technical platforms and interaction paradigms.</p>
+      <p>the project reinforced my interest in using game design to make learning more engaging, particularly in areas where traditional educational approaches struggle to maintain student motivation.</p>
+    </section>
+
+    <div class="back-link">
+      <a href="../index.html">← back to work</a>
+    </div>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load scripts -->
+  <script src="../js/common.js"></script>
+  <script src="../js/prototypes.js"></script>
+  <script src="../js/carousel.js"></script> <!-- your class lives here -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      console.log('Loading prototypes...');
+      renderPrototypes('../data/prototypes.json', '.prototype-showcase-list', 'phonics');
+
+      // Initialize carousel and load images
+      const carousel = new ImageCarousel();
+      await carousel.loadImagesFromDirectory('../assets/phonics/overview-carousel/');
+    });
+  </script>
+</body>
+</html>

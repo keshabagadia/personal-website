@@ -1,9 +1,9 @@
 [
   {
-    "title": "finding phonemes",
+    "title": "found sound",
     "collection": "phonics",
-    "brief": "discovery-focused word game where players unlock new phonemes by creating different words with available letters.",
-    "thumbnail": "assets/images/prototype-thumb.jpg",
+    "brief": "discovery-focused word game where players unlock new phonemes by creating different words with available letters",
+    "thumbnail": "phonics/found-sound-thumb.png",
     "technologies": ["Unity", "Python", "WebGL"],
     "details": [
       {
@@ -27,13 +27,13 @@
   {
     "title": "i like the sound of you",
     "collection": "phonics",
-    "brief": "romance visual novel where players identify correct phonemic dialogue choices to impress their poetry club crush.",
-    "thumbnail": "assets/images/prototype-thumb.jpg",
-    "technologies": ["Unity", "Python", "WebGL"],
+    "brief": "romance visual novel where players identify correct phonemic dialogue choices to impress their poetry club crush",
+    "thumbnail": "phonics/sound-of-you-thumb.png",
+    "technologies": ["Ren'Py"],
     "details": [
       {
         "heading": "System Highlight",
-        "text": "Scalable narrative design to align with curriculum and expand character sets"
+        "text": "Scalable narrative design to align with curriculum and employ level progression"
       },
       {
         "heading": "Design Insight",
@@ -45,58 +45,84 @@
       },
       {
         "heading": "Feedback",
-        "text": "described as “refreshing & hilarious,” opening new directions for educational visual novels"
+        "text": "described as \"refreshing & hilarious,\" opening new directions for educational visual novels"
       }
     ]
   },
   {
     "title": "phony mystery",
     "collection": "phonics",
-    "brief": "detective adventure game where players collect phonemes from environmental clues to solve mysteries, combining narrative intrigue with systematic phonics learning.",
-    "thumbnail": "assets/images/prototype-thumb.jpg",
-    "technologies": ["Unity", "Python", "WebGL"],
+    "brief": "detective adventure game where players collect phonemes from environmental clues to solve mysteries",
+    "thumbnail": "phonics/phony-mystery-thumb.png",
+    "technologies": ["Unity2D", "Unity3D", "Python", "WebGL"],
     "details": [
       {
-        "heading": "Learning Goal",
-        "text": "phoneme pattern recognition through investigative gameplay (bed → b eh d, then bread → b r eh d)"
+        "heading": "System Highlight",
+        "text": "Implemented a complex UI manager that accommodates multiple systems like dialogue and inventory"
       },
       {
-        "heading": "Key Insight",
-        "text": "modular dialogue system enabled flexible narrative flow while maintaining educational focus"
+        "heading": "Design Insight",
+        "text": "A clever gameplay loop has limited value if it isn’t intuitive or accessible to players"
       },
       {
-        "heading": "Technical Highlight",
-        "text": "integrated cmu pronunciation library with unity for accurate phoneme breakdown and audio recitation"
+        "heading": "Iteration",
+        "text": "Refactored Unity codebase into modular managers, allowing rapid narrative and content iteration"
       },
       {
-        "heading": "Design Evolution",
-        "text": "shifted from 3d to 2d click-and-point interface for rapid content iteration and testing"
+        "heading": "Feedback",
+        "text": "Concept validated as interesting and promising, but confusing in its current form"
       }
     ]
   },
   {
     "title": "cards against reason",
     "collection": "phonics",
-    "brief": "social card game inspired by cards against humanity, using phoneme-focused word cards for absurd sentence creation with educational reinforcement.",
-    "thumbnail": "assets/images/prototype-thumb.jpg",
-    "technologies": ["Unity", "Python", "WebGL"],
+    "brief": "A social card game where players combine phoneme-based cards to build absurd, funny sentences",
+    "thumbnail": "phonics/cards-against-reason-thumb.png",
+    "technologies": ["PlayingCards.io", "Excel"],
     "details": [
       {
-        "heading": "Learning Goal",
-        "text": "phoneme-word association through repetition and creative application"
+        "heading": "System Highlight",
+        "text": "Similar to Cards Against Humanity, but players can chain multiple response cards in one turn"
       },
       {
-        "heading": "Key Insight",
-        "text": "social gameplay engaged middle schoolers more than individual learning activities"
+        "heading": "Design Insight",
+        "text": "Humor is the hook, while repeated use of phoneme decks naturally reinforces sound–letter associations"
       },
       {
-        "heading": "Design Innovation",
-        "text": "wild card system allowed flexible phoneme substitution while maintaining game flow"
+        "heading": "Iteration",
+        "text": "Originally a brainstorming tool using permutations of prompts, now shifting toward structured play"
       },
       {
-        "heading": "Iteration Focus",
-        "text": "identified need for more scaffolding to reduce performance pressure for humor"
+        "heading": "Feedback",
+        "text": "Highly engaging and educational, though some players may need scaffolding and balance around card use"
       }
     ]
-  }
+  },
+  {
+  "title": "scream phoneme",
+  "collection": "phonics",
+  "brief": "A voice-controlled platformer where saying 'er' words makes the player jump across buildings",
+  "thumbnail": "phonics/scream-phoneme.png",
+  "technologies": ["Unity", "Windows Speech Recognition"],
+  "details": [
+    {
+      "heading": "System Highlight",
+      "text": "Uses Unity’s Windows Speech Recognition to map audio input with phoneme recognition"
+    },
+    {
+      "heading": "Design Insight",
+      "text": "Reinforcement through speaking phonemes can enhance learning, coupling with in-game feedback"
+    },
+    {
+      "heading": "Iteration",
+      "text": "Started with complex multi-phoneme navigation, simplified to single-jump control to test core loop"
+    },
+    {
+      "heading": "Feedback",
+      "text": "Not yet a fun game but a strong proof-of-concept, needing polish and tighter feedback loops"
+    }
+  ]
+}
+
 ]

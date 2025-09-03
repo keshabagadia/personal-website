@@ -340,53 +340,18 @@ body {
   align-items: stretch; /* Ensures all cards stretch to same height */
 }
 
-.prototype-card {
-  background: white;
-  margin-bottom: 2.5em;
-  padding: 2.5em;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  border: 1px solid #f0f0f0;
-  position: relative;
-  transition: all 0.3s ease;
-  padding: 1em;
-  margin-bottom: 0;
-  font-size: 0.95em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 320px; /* Reduced from 480px */
-  height: 100%;      /* Stretch to fill grid cell */
-}
-
-.prototype-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #007acc 0%, #4a9eff 100%);
-  border-radius: 20px 20px 0 0;
-}
-
-.prototype-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-}
-
 .prototype-card h3 {
   color: #007acc;
   font-size: 1.8em;
-  margin: 0 0 0.8em 0;
+  margin: 0 0 0 0;
   text-transform: lowercase;
   font-weight: bold;
-}
+ }
 
 .prototype-card > p {
   font-size: 1.2em;
   color: #555;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   line-height: 1.5;
   padding: 0;
 }
@@ -831,7 +796,7 @@ body {
 .prototype-card {
   perspective: 1200px;
   position: relative;
-  min-height: 320px;
+  min-height: 480px;
   height: 100%;
 }
 
@@ -871,7 +836,7 @@ body {
 
 .prototype-thumb {
   width: 100%;
-  height: 120px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1em;
@@ -880,7 +845,8 @@ body {
 .prototype-brief {
   font-size: 1.1em;
   color: #555;
-  margin-bottom: 1em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
   text-align: center;
 }
 
@@ -889,13 +855,13 @@ body {
   gap: 0.7em;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 }
 
 .prototype-tech span {
   background: #e0f0ff;
   color: #007acc;
-  padding: 0.4em 1em;
+  padding: 0.4em;
   border-radius: 12px;
   font-size: 0.95em;
 }
