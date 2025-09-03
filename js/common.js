@@ -96,7 +96,7 @@ class SiteUtils {
 
 // Navigation functions for header links
 function navigateHome() {
-  const homePath = '../pages/index.html';
+  const homePath = '../index.html';
   window.location.href = homePath;
 }
 
