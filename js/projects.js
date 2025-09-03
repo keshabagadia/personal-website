@@ -13,16 +13,16 @@ function renderProjectsFromJSON(projects) {
       if (project.video) {
         // Create thumbnail video (paused, showing first frame)
         mediaHTML += `<video class="project-image" muted preload="metadata" data-video-src="assets/videos/${project.video}">
-          <source src="../assets/videos/${project.video}" type="video/mp4">
+          <source src="./assets/videos/${project.video}" type="video/mp4">
         </video>`;
         
         // Create hover video (same source, will play on hover)
         mediaHTML += `<video class="project-video" muted loop preload="metadata">
-          <source src="../assets/videos/${project.video}" type="video/mp4">
+          <source src="./assets/videos/${project.video}" type="video/mp4">
         </video>`;
       } else if (project.image) {
         // For image-only projects, add hover effect
-        mediaHTML += `<img src="../assets/images/${project.image}" alt="${project.title}" class="project-image" loading="lazy">`;
+        mediaHTML += `<img src="./assets/images/${project.image}" alt="${project.title}" class="project-image" loading="lazy">`;
         // Optional: Add a subtle hover overlay for image projects
         mediaHTML += `<div class="image-hover-overlay"></div>`;
       }
