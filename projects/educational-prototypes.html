@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>educational game prototypes – Kesha Bagadia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/project-styles.css">
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main class="project-content">
+    <section class="overview-section">
+      <div class="overview-grid">
+        <div class="overview-video">
+          <div class="carousel-container">
+            <div class="carousel-slides" id="carousel-slides">
+              <div class="carousel-slide">
+                <img src="../assets/images/phonics-prototype-1.jpg" alt="Phoneme Type Racer gameplay" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="../assets/images/phonics-prototype-2.jpg" alt="Word Discovery Grid interface" loading="lazy">
+              </div>
+              <div class="carousel-slide">
+                <img src="../assets/images/phonics-prototype-3.jpg" alt="Cooking Combinations 3D prototype" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">‹</button>
+            <button class="carousel-nav carousel-next" onclick="changeSlide(1)">›</button>
+            <div class="carousel-indicators" id="carousel-indicators"></div>
+          </div>
+        </div>
+        <div class="overview-content">
+          <h2>educational game prototypes</h2>
+          <p class="description">rapid prototyping exploration of phonics learning mechanics for middle schoolers through iterative design and user research. designed and developed 5 unique educational game prototypes testing different approaches to phonemic awareness.</p>
+          
+          <div class="project-details-grid">
+            <div class="detail-row">
+              <strong>role:</strong>
+              <span>technical game designer</span>
+            </div>
+            <div class="detail-row">
+              <strong>team:</strong>
+              <span>4 members</span>
+            </div>
+            <div class="detail-row">
+              <strong>duration:</strong>
+              <span>may 2024 – aug 2024</span>
+            </div>
+            <div class="detail-row">
+              <strong>platform:</strong>
+              <span>pc, web,board games</span>
+            </div>
+            <div class="detail-row">
+              <strong>tools:</strong>
+              <span>Unity, C#, Python, CMU pronunciation library</span>
+            </div>
+            <div class="detail-row">
+              <strong>institution:</strong>
+              <span>center for transformational play, cmu</span>
+            </div>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://miro.com/app/board/uXjVNdKLic0=/" class="project-link" target="_blank">research board</a>
+          </div>
+          
+          <div class="key-contributions">
+            <h3>key contributions</h3>
+            <ul class="contributions-list">
+              <li>designed and developed 5+ educational game prototypes testing different phonics learning mechanics</li>
+              <li>established EOTA methodology (experience, observations, theory, advice) for structured user feedback</li>
+              <li>conducted weekly user research sessions with target demographic to validate design decisions</li>
+              <li>built modular systems in unity and web technologies for rapid iteration cycles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="prototype-showcase">
+      <h2>prototype showcase</h2>
+      <p class="subtitle">each prototype explored different learning mechanics and interaction patterns</p>
+
+      <div class="prototype-showcase-list"></div>
+    </section>
+    
+    <!-- <section class="case-study">
+      <h2>research methodology</h2>
+      <p class="subtitle">structured approach to rapid prototyping and user feedback</p>
+
+      <h3>EOTA framework</h3>
+      <p>developed and implemented experience, observations, theory, advice feedback structure for consistent evaluation across prototypes.</p>
+      <ul>
+        <li><strong>experience:</strong> players articulated emotional responses and engagement levels</li>
+        <li><strong>observations:</strong> team documented behavioral patterns during gameplay</li>
+        <li><strong>theory:</strong> formulated hypotheses about learning mechanics and player motivation</li>
+        <li><strong>advice:</strong> generated actionable recommendations for iteration</li>
+      </ul>
+
+      <h3>iteration cycles</h3>
+      <p>weekly prototype-test-iterate rhythm with target audience validation and cross-platform exploration.</p>
+      <ul>
+        <li>rapid development using unity, web technologies, and physical prototyping</li>
+        <li>direct playtesting with middle school demographic for authentic feedback</li>
+        <li>comparative analysis across different interaction modalities (physical, 2d, 3d, multiplayer)</li>
+      </ul>
+
+      <h3>key research findings</h3>
+      <ul>
+        <li><strong>constraint-driven creativity:</strong> clear boundaries enhanced rather than limited player engagement</li>
+        <li><strong>emergent social dynamics:</strong> competitive elements arose naturally even in single-player designs</li>
+        <li><strong>multi-modal learning:</strong> audio, visual, and tactile elements worked synergistically for phonics education</li>
+        <li><strong>feedback loop criticality:</strong> immediate, clear responses essential for learning retention</li>
+      </ul>
+    </section> -->
+
+    <section class="reflection-section">
+      <h2>impact and learnings</h2>
+      <p>this research project validated my ability to rapidly prototype and iterate educational game concepts while maintaining rigorous user research standards. the EOTA methodology proved valuable for structured feedback collection, and the diversity of prototypes demonstrated adaptability across different technical platforms and interaction paradigms.</p>
+      <p>the project reinforced my interest in using game design to make learning more engaging, particularly in areas where traditional educational approaches struggle to maintain student motivation.</p>
+    </section>
+
+    <div class="back-link">
+      <a href="../index.html">← back to work</a>
+    </div>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../common.js"></script>
+  <script src="../prototypes.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      renderPrototypes('../prototypes.json', '.prototype-showcase-list', 'phonics');
+    });
+  </script>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+
+    function initCarousel() {
+      const indicatorsContainer = document.getElementById('carousel-indicators');
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot';
+        if (i === 0) dot.classList.add('active');
+        dot.onclick = () => goToSlide(i);
+        indicatorsContainer.appendChild(dot);
+      }
+    }
+
+    function updateCarousel() {
+      const slidesContainer = document.getElementById('carousel-slides');
+      const indicators = document.querySelectorAll('.carousel-dot');
+      
+      slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      indicators.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide >= totalSlides) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    // Initialize carousel when page loads
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  </script>
+</body>
+</html>

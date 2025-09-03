@@ -1,0 +1,102 @@
+[
+  {
+    "title": "finding phonemes",
+    "collection": "phonics",
+    "brief": "discovery-focused word game where players unlock new phonemes by creating different words with available letters.",
+    "thumbnail": "assets/images/prototype-thumb.jpg",
+    "technologies": ["Unity", "Python", "WebGL"],
+    "details": [
+      {
+        "heading": "System Highlight",
+        "text": "integrated CMU Pronouncing Dictionary and sound library for phoneme detection and feedback"
+      },
+      {
+        "heading": "Design Insight",
+        "text": "one consonant can represent multiple phonemes, enabling exploration and replayability"
+      },
+      {
+        "heading": "Iteration",
+        "text": "Shifted from rapid guessing to deliberate discovery by introducing negative scoring"
+      },
+      {
+        "heading": "Feedback",
+        "text": "positive response for progress feedback; next iteration on responsive game balance curve"
+      }
+    ]
+  },
+  {
+    "title": "i like the sound of you",
+    "collection": "phonics",
+    "brief": "romance visual novel where players identify correct phonemic dialogue choices to impress their poetry club crush.",
+    "thumbnail": "assets/images/prototype-thumb.jpg",
+    "technologies": ["Unity", "Python", "WebGL"],
+    "details": [
+      {
+        "heading": "System Highlight",
+        "text": "Scalable narrative design to align with curriculum and expand character sets"
+      },
+      {
+        "heading": "Design Insight",
+        "text": "externalized phonemic learning goals by tapping into hi-lo books' reading motivation"
+      },
+      {
+        "heading": "Iteration",
+        "text": "adapted a DDLC–inspired word selection mini-game to reinforce phoneme choices"
+      },
+      {
+        "heading": "Feedback",
+        "text": "described as “refreshing & hilarious,” opening new directions for educational visual novels"
+      }
+    ]
+  },
+  {
+    "title": "phony mystery",
+    "collection": "phonics",
+    "brief": "detective adventure game where players collect phonemes from environmental clues to solve mysteries, combining narrative intrigue with systematic phonics learning.",
+    "thumbnail": "assets/images/prototype-thumb.jpg",
+    "technologies": ["Unity", "Python", "WebGL"],
+    "details": [
+      {
+        "heading": "Learning Goal",
+        "text": "phoneme pattern recognition through investigative gameplay (bed → b eh d, then bread → b r eh d)"
+      },
+      {
+        "heading": "Key Insight",
+        "text": "modular dialogue system enabled flexible narrative flow while maintaining educational focus"
+      },
+      {
+        "heading": "Technical Highlight",
+        "text": "integrated cmu pronunciation library with unity for accurate phoneme breakdown and audio recitation"
+      },
+      {
+        "heading": "Design Evolution",
+        "text": "shifted from 3d to 2d click-and-point interface for rapid content iteration and testing"
+      }
+    ]
+  },
+  {
+    "title": "cards against reason",
+    "collection": "phonics",
+    "brief": "social card game inspired by cards against humanity, using phoneme-focused word cards for absurd sentence creation with educational reinforcement.",
+    "thumbnail": "assets/images/prototype-thumb.jpg",
+    "technologies": ["Unity", "Python", "WebGL"],
+    "details": [
+      {
+        "heading": "Learning Goal",
+        "text": "phoneme-word association through repetition and creative application"
+      },
+      {
+        "heading": "Key Insight",
+        "text": "social gameplay engaged middle schoolers more than individual learning activities"
+      },
+      {
+        "heading": "Design Innovation",
+        "text": "wild card system allowed flexible phoneme substitution while maintaining game flow"
+      },
+      {
+        "heading": "Iteration Focus",
+        "text": "identified need for more scaffolding to reduce performance pressure for humor"
+      }
+    ]
+  }
+]

@@ -3,7 +3,7 @@
     "title": "Mic Check",
     "slug": "mic-check",
     "description": "A rap battle game of wits and words against AI opponents.",
-    "tags": ["game-design", "writing", "programming"],
+    "tags": ["game"],
     "video": "mic-check-thumbnail.mp4",
     "thumbnailTime": 1.5
   },
@@ -11,7 +11,7 @@
     "title": "Recollection",
     "slug": "recollection",
     "description": "A serious VR narrative experience exploring memory and identity.",
-    "tags": ["game-design", "programming"],
+    "tags": ["game"],
     "video": "recollection-thumbnail.mp4",
     "thumbnailTime": 1
   },
@@ -19,7 +19,7 @@
     "title": "Torn Apart",
     "slug": "torn-apart",
     "description": "A packing simulation game that reveals the human cost of gentrification.",
-    "tags": ["game-design", "writing"],
+    "tags": ["game"],
     "video": "torn-apart-thumbnail.mp4",
     "thumbnailTime": 3
   },
@@ -27,8 +27,7 @@
     "title": "Competing Needs",
     "slug": "competing-needs",
     "description": "A two-player competitive game about balancing physical and creative needs for a person's day.",
-    "tags": ["game-design"],
+    "tags": ["game"],
     "image": "competing-needs-thumbnail.png"
   }
-
 ]

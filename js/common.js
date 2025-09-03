@@ -25,7 +25,7 @@ class SiteUtils {
       const element = document.getElementById(elementId);
       
       if (element) {
-        element.outerHTML = data;
+        element.innerHTML = data;
         this.componentsLoaded++;
         
         // Initialize features when all components are loaded
@@ -88,22 +88,20 @@ class SiteUtils {
 
   async loadComponents() {
     await Promise.all([
-      this.loadComponent('header.html', 'header-placeholder'),
-      this.loadComponent('footer.html', 'footer-placeholder')
+      this.loadComponent('../partials/header.html', 'header-placeholder'),
+      this.loadComponent('../partials/footer.html', 'footer-placeholder')
     ]);
   }
 }
 
 // Navigation functions for header links
 function navigateHome() {
-  const isProjectPage = window.location.pathname.includes('/projects/') || window.location.pathname.includes('projects/');
-  const homePath = isProjectPage ? '../index.html' : 'index.html';
+  const homePath = '../pages/index.html';
   window.location.href = homePath;
 }
 
 function navigateResume() {
-  const isProjectPage = window.location.pathname.includes('/projects/') || window.location.pathname.includes('projects/');
-  const resumePath = isProjectPage ? '../resume.pdf' : 'resume.pdf';
+  const resumePath = "../assets/documents/resume.pdf";
   window.open(resumePath, '_blank');
 }
 
